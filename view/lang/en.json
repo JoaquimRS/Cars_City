@@ -1,0 +1,12 @@
+{
+    "en" : {
+        "Car" : "Car",
+        "Home": "Home",
+        "Shop": "Shop",
+        "User" : "User",
+        "Languages": "Languages",
+        "Spanish": "Spanish",
+        "English": "English",
+        "Valencian": "Valencian"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "es" : {
+        "Car" : "Coche",
+        "Home": "Inicio",
+        "Shop": "Tienda",
+        "Languages": "Lenguages",
+        "Spanish": "Español",
+        "English": "Ingles",
+        "Valencian": "Valenciano"
+    }
+}
