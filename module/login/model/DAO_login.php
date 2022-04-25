@@ -33,7 +33,7 @@
                 $res_insert = mysqli_query($conection, $sql_insert);
                 php_mysql::close($conection);
                 if ($res_insert){
-                    $jwt = parse_ini_file("../../../model/.git/jwt.ini");
+                    $jwt = parse_ini_file("../../../model/jwt.ini");
                     $header = $jwt['header'];
                     $secret = $jwt['secret'];
                     $payload = '{"iat":"'.time().'","exp":"'.(time()+(60*60)).'","name":"'.$user.'"}';
@@ -70,7 +70,7 @@
             }
             $password_hash = $res_user->fetch_object()->contrasena;
             if (password_verify($password, $password_hash)) {
-                $jwt = parse_ini_file("../../../model/.git/jwt.ini");
+                $jwt = parse_ini_file("../../../model/jwt.ini");
                 $header = $jwt['header'];
                 $secret = $jwt['secret'];
                 $payload = '{"iat":"'.time().'","exp":"'.(time()+(10*60)).'","name":"'.$user.'"}';
@@ -90,7 +90,7 @@
         }
         function token_decode($tokenObj) {
             // $jwt = parse_ini_file("../../../model/jwt.ini");
-            $jwt = parse_ini_file("../../../model/.git/jwt.ini");
+            $jwt = parse_ini_file("../../../model/jwt.ini");
             $secret = $jwt['secret'];
             $JWT = new JWT;
             $token = $tokenObj;
@@ -168,7 +168,7 @@
             }
             
             if ($user == $_SESSION['user']) {
-                $jwt = parse_ini_file("../../../model/.git/jwt.ini");
+                $jwt = parse_ini_file("../../../model/jwt.ini");
                 $header = $jwt['header'];
                 $secret = $jwt['secret'];
                 $payload = '{"iat":"'.time().'","exp":"'.(time()+(10*60)).'","name":"'.$user.'"}';
