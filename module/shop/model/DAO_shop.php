@@ -18,7 +18,7 @@
             return $retrArray;
         }
         function token_decode($tokenObj) {
-            $jwt = parse_ini_file("../../../model/.git/jwt.ini");
+            $jwt = parse_ini_file("../../../model/jwt.ini");
             $secret = $jwt['secret'];
             $JWT = new JWT;
             $token = $tokenObj;
